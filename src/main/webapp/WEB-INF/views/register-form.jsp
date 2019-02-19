@@ -10,11 +10,11 @@
 <h1>Register User</h1>
 	
 	<form action="/registerForm">
-		<p>First Name: <input type="text" name="firstName" /> </p>
-		<p>Last Name: <input type="text" name="lastName" /> </p>
-		<p>Email: <input type="email" name="email" /> </p>
-		<p>Phone Number: <input type="number" name="phoneNumber"/> </p>
-		<p>Password: <input type="password" name="password"/> </p>
+		<p>First Name: <input type="text" required name="firstName" /> </p>
+		<p>Last Name: <input type="text" required name="lastName" /> </p>
+		<p>Email: <input type="email" required name="email" /> </p>
+		<p>Phone Number: <input type="number" required  name="phoneNumber"/> </p>
+		<p>Password: <input type="password" required name="password"/> </p>
 		
 		<p>
 			<button type="submit">submit</button>

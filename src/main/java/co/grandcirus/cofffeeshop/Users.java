@@ -1,22 +1,30 @@
 package co.grandcirus.cofffeeshop;
 
-public class User {
+public class Users {
 
-	public class UserInfo {
-
+		private long id;
 		private String firstName;
 		private String lastName;
 		private String email;
-		private String phoneNumber;
+		private int phoneNumber;
 		private String password;
 
-		public UserInfo(String firstName, String lastName, String email, String phoneNumber, String password) {
+		public Users(long id, String firstName, String lastName, String email, int phoneNumber, String password) {
 			super();
+			this.id = id;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.email = email;
 			this.phoneNumber = phoneNumber;
 			this.password = password;
+		}
+
+		public long getId() {
+			return id;
+		}
+
+		public void setId(long id) {
+			this.id = id;
 		}
 
 		public String getFirstName() {
@@ -43,11 +51,11 @@ public class User {
 			this.email = email;
 		}
 
-		public String getPhoneNumber() {
+		public int getPhoneNumber() {
 			return phoneNumber;
 		}
 
-		public void setPhoneNumber(String phoneNumber) {
+		public void setPhoneNumber(int phoneNumber) {
 			this.phoneNumber = phoneNumber;
 		}
 
@@ -61,9 +69,11 @@ public class User {
 
 		@Override
 		public String toString() {
-			return "UserInfo [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", phoneNumber="
-					+ phoneNumber + ", password=" + password + "]";
+			return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+					+ ", phoneNumber=" + phoneNumber + ", password=" + password + "]";
 		}
 
+		
+		
+
 	}
-}
