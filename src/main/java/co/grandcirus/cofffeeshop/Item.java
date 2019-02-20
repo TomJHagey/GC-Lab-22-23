@@ -1,14 +1,27 @@
 package co.grandcirus.cofffeeshop;
 
-public class Items {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	private long id;
+@Entity
+@Table(name="items") // name of SQL table
+public class Item {
+	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
 	private String name;
 	private String description;
 	private int quantity;
 	private double price;
+	
+	public Item ( ) {
+		
+	}
 
-	public Items(long id, String name, String description, int quantity, double price) {
+	public Item(Long id, String name, String description, int quantity, double price) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -59,7 +72,7 @@ public class Items {
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", name=" + name + ", description=" + description + ", quantity=" + quantity
+		return "Item [id=" + id + ", name=" + name + ", description=" + description + ", quantity=" + quantity
 				+ ", price=" + price + "]";
 	}
 

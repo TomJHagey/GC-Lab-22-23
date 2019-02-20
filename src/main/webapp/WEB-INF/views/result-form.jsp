@@ -8,7 +8,8 @@
 </head>
 <body>
 
-Hello: ${users.firstName}
+Hello: ${user.firstName}
+You've added an item
 
 </body>
 </html>
