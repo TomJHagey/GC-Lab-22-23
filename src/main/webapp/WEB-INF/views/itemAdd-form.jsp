@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="/addItemForm">
+	<form action="/itemAddForm">
 		<p>Name: <input type="text" required name="name" /> </p>
 		<p>Description: <input type="text" required name="description" /> </p>
 		<p>Quantity: <input type="text" required name="quantity" /> </p>

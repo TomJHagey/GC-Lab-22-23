@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CoffeeController {
 	
-	@Autowired 
+	@Autowired  
 	UserDao userDao;
 	
 	@Autowired
@@ -25,6 +25,7 @@ public class CoffeeController {
 	public ModelAndView showDoForm() {
 		return new ModelAndView("register-form");
 	}
+
 	@RequestMapping("/addForm")
 	public ModelAndView showAddForm() {
 		return new ModelAndView("itemAdd-form");
