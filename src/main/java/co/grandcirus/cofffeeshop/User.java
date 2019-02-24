@@ -23,9 +23,7 @@ public class User {
 	private int phoneNumber;
 	private String password;
 	
-	public User() {
-		
-	}
+	public User() {}
 
 	public User(Long id, String firstName, String lastName, String email, int phoneNumber, String password) {
 		super();
@@ -37,11 +35,11 @@ public class User {
 		this.password = password;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

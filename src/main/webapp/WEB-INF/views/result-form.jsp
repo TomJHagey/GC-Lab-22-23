@@ -9,7 +9,7 @@
 <body>
 
 Hello: ${user.firstName}
-You've added an item
+
 
 </body>
 </html>

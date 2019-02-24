@@ -19,8 +19,19 @@ public class ItemDao {
 		return em.createQuery("FROM Item", Item.class).getResultList();
 
 	}
+	public Item findById(Long id) {
+		return em.find(Item.class, id);
+	}
 
 	public void create(Item item) {
 		em.persist(item);
+	}
+	
+	public void update(Item item) {
+		em.merge(item);
+	}
+	
+	public void delete(Long id) {
+		em.remove(em.getReference(Item.class, id));
 	}
 }

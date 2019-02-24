@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
-	<a href="/requestForm">Register a User</a>
-	<a href="/admin">Administrator</a>
+
+<a href="/addForm">Add an Item</a>
+
 
 	<table border="1">
 		
@@ -26,16 +26,13 @@
 				<td>${item.description}</td>
 				<td>${item.quantity}</td>
 				<td>${item.price}</td>
+				<td><a href="/itemEditForm?id=${item.id}">Edit</a></td>
+				<td><a href="/deleteItemForm?id=${item.id}">Delete</a></td>
 				
 			</tr>
 		</c:forEach>
 
 	</table>
-	
-
-
-
-
 
 </body>
 </html>

@@ -17,9 +17,7 @@ public class Item {
 	private int quantity;
 	private double price;
 	
-	public Item ( ) {
-		
-	}
+	public Item ( ) {}
 
 	public Item(Long id, String name, String description, int quantity, double price) {
 		super();
@@ -30,11 +28,11 @@ public class Item {
 		this.price = price;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
