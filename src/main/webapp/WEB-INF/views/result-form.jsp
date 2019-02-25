@@ -10,6 +10,7 @@
 
 Hello: ${user.firstName}
 
+<a href="/">Return to Homepage</a>
 
 </body>
 </html>

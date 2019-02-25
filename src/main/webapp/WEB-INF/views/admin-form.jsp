@@ -33,6 +33,8 @@
 		</c:forEach>
 
 	</table>
+	
+	<a href="/">Return to Homepage</a>
 
 </body>
 </html>
