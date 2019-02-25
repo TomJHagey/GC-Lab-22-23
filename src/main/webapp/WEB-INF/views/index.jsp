@@ -5,15 +5,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="/style.css" />
+<title>Coffee Shop</title>
 </head>
 <body>
 
-	<a href="/requestForm">Register a User</a>
-	<a href="/admin">Administrator</a>
+	<form method="post">
+	<div class = "container">
+	
+	<h1>The Coffee Shop</h1>
+	<h2>Item List</h2>
+	
 
-	<table border="1">
+	<table class = "table table-striped">
 		
 		<th>Name</th>
 		<th>Description</th>
@@ -32,10 +38,18 @@
 
 	</table>
 	
+	
+	<a href="/requestForm"><button type="button" class="btn btn-primary ml-2">Register User</button></a>
+	<a href="/requestForm"><button type="button" class="btn btn-primary">Log in</button></a>
+	<a href="/admin"><button type="button" class="btn btn-secondary ml-4">Administrator</button></a>
+
+	
+	
+		<p>Registered: ${profile.firstName} ${profile.lastName}</p>
 
 
 
-
-
+</div>
+</form>
 </body>
 </html>

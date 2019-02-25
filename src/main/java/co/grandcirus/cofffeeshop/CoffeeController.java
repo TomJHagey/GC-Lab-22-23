@@ -2,12 +2,14 @@
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -24,16 +26,17 @@ public class CoffeeController {
 		List<Item> ListOfItems = itemDao.findAll();
 		return new ModelAndView("index", "items", ListOfItems);
 	}
-
+	
 	@RequestMapping("/requestForm")
 	public ModelAndView showDoForm() {
 		return new ModelAndView("register-form");
 	}
 
 	@RequestMapping("/registerForm")
-	public ModelAndView doForm(User user) {
+	public ModelAndView doForm(User user, HttpSession session) {
 		ModelAndView mav = new ModelAndView("result-form");
 		mav.addObject("user", user);
+		session.setAttribute("profile", user);
 		userDao.create(user);
 		return mav;
 
@@ -42,7 +45,7 @@ public class CoffeeController {
 	@RequestMapping("/addForm")
 	public ModelAndView showAddForm() {
 		return new ModelAndView("itemAdd-form");
-	}
+	} 
 	
 	@RequestMapping("/admin")
 	public ModelAndView showAdminForm() {
