@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+<p class="message">${message}</p>
 
 Hello: ${user.firstName}
 

@@ -18,6 +18,7 @@
 	<h1>The Coffee Shop</h1>
 	<h2>Item List</h2>
 	
+	
 
 	<table class = "table table-striped">
 		
@@ -39,13 +40,17 @@
 	</table>
 	
 	
-	<a href="/requestForm"><button type="button" class="btn btn-primary ml-2">Register User</button></a>
-	<a href="/requestForm"><button type="button" class="btn btn-primary">Log in</button></a>
-	<a href="/admin"><button type="button" class="btn btn-secondary ml-4">Administrator</button></a>
+	<a href="/requestForm"><button type="button" class="btn btn-secondary">Register User</button></a>
+	<a href="/login"><button type="button" class="btn btn-primary ml-4">Log in</button></a>
+	<a href="/logout"><button type="button" class="btn btn-primary">Log out</button></a>
+	<a href="/admin"><button type="button" class="btn btn-info ml-4">Administrator</button></a>
 
+	<p class="message">${message}</p>
+	<p> ${profile.firstName} ${profile.lastName} </p>
 	
 	
-		<p>Registered: ${profile.firstName} ${profile.lastName}</p>
+	
+		
 
 
 

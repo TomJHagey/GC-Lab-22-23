@@ -1,6 +1,7 @@
 package co.grandcirus.cofffeeshop;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,16 @@ public class UserDao {
 
 	public void create(User user) {
 		em.persist(user);
+	}
+	public User findByUsername(String username) {
+		try {
+			return em.createQuery("FROM User WHERE firstName = :username", User.class)
+					.setParameter("username", username)
+					.getSingleResult();
+		} catch (NoResultException ex) {
+			
+			return null;
+		}
 	}
 
 }
